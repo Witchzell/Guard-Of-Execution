@@ -22,6 +22,7 @@ public class Movement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
+            Debug.Log (jump);
         }
         
         animator.SetFloat("Speed", Mathf.Abs(horizontalSpeed)); // Animation for running
