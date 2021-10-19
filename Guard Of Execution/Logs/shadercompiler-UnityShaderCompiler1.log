@@ -1,6 +1,3 @@
-Base path: '/home/witchzell/Unity/Hub/Editor/2020.3.8f1/Editor/Data', plugins path '/home/witchzell/Unity/Hub/Editor/2020.3.8f1/Editor/Data/PlaybackEngines'
+Base path: '/home/skywalker/Unity/Hub/Editor/2020.3.17f1/Editor/Data', plugins path '/home/skywalker/Unity/Hub/Editor/2020.3.17f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 
-Cmd: shutdown
-
-Quitting shader compiler process

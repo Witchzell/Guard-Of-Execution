@@ -1,4 +1,5 @@
 //Code gotten from https://github.com/Brackeys/2D-Character-Controller/blob/master/CharacterController2D.cs
+// I have made a few addition to the code
 
 using UnityEngine;
 using UnityEngine.Events;
@@ -11,10 +12,12 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private bool m_AirControl = true;				// Whether or not a player can steer while jumping;
 	[SerializeField] private LayerMask m_WhatIsGround;							// A mask determining what is ground to the character
 	[SerializeField] private Transform m_GroundCheck;							// A position marking where to check if the player is grounded.
+	[SerializeField] private Transform m_WallCheck;								// Chekcing for wall (my addition)
 	[SerializeField] private Transform m_CeilingCheck;							// A position marking where to check for ceilings
 	[SerializeField] private Collider2D m_CrouchDisableCollider;				// A collider that will be disabled when crouching
 
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
+	const float k_WallRadius = .2f;     // Radius of the overlap circle to determine if its touching a wall
 	private bool m_Grounded;            // Whether or not the player is grounded.
 	const float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
 	private Rigidbody2D m_Rigidbody2D;
@@ -51,6 +54,7 @@ public class CharacterController2D : MonoBehaviour
 		// The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
 		// This can be done using layers instead but Sample Assets will not overwrite your project settings.
 		Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
+		Collider2D[] wallColliders = Physics2D.OverlapCircleAll(m_WallCheck.position, k_WallRadius, m_WhatIsGround); // My addittion, a wall checker
 		for (int i = 0; i < colliders.Length; i++)
 		{
 			if (colliders[i].gameObject != gameObject)
@@ -58,6 +62,14 @@ public class CharacterController2D : MonoBehaviour
 			    m_Grounded = true;
                 if (!wasGrounded)
 					OnLandEvent.Invoke();
+			}
+		}
+
+		for (int i = 0; i < wallColliders.Length; i++) // My addtion, part of the wall checker
+		{
+			if (wallColliders[i].gameObject != gameObject)
+			{
+				m_Grounded = false;
 			}
 		}
 	}
@@ -133,7 +145,6 @@ public class CharacterController2D : MonoBehaviour
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 		}
 	}
-
 
 	private void Flip()
 	{
