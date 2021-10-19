@@ -10,7 +10,7 @@ public class getOut : MonoBehaviour
     
     private void Update()
     {
-        if(Input.anyKey)
+        if(Input.anyKey) //Pressing any key to leave the menu
         {
             menu.SetActive(false);
             beGone = false;

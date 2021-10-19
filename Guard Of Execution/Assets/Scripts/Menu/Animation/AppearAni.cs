@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class AppearAni : MonoBehaviour
 {
-    public int timer = 0;
+    public int timer = 0; //Timer for the animation to start
     public Text tex;
     private AudioSource audioSource;
 
     private void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>(); //Getting the component that allows for the audio
         StartCoroutine(FadeText());
     }
 

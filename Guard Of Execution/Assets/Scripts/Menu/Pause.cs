@@ -9,9 +9,9 @@ public class Pause : MonoBehaviour
     public static bool GamePaused = false;
     public GameObject pauseMenu;
 
-    void Update()
+    private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().buildIndex != 1)
+        if(Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().buildIndex != 1) //Making sure you cant open menu in main menu
         {
             if(GamePaused)
             {
@@ -24,14 +24,14 @@ public class Pause : MonoBehaviour
         }
     }
 
-    public void Resume()
+    public void Resume() //Resume time when menu is closed
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         GamePaused = false;
     }
 
-    void Stop()
+    public void Stop() //Stops time when menu is open
     {
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
@@ -42,7 +42,7 @@ public class Pause : MonoBehaviour
     {
         Scene_Manager.Level = 1;
 
-        levelReciver = GameObject.FindGameObjectWithTag("Manager").GetComponent<Scene_Manager>();
+        levelReciver = GameObject.FindGameObjectWithTag("Manager").GetComponent<Scene_Manager>(); //Gross coding
         levelReciver.LoadOtherScene();
         pauseMenu.SetActive(false);
     }
