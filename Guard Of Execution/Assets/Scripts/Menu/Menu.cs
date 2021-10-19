@@ -13,7 +13,7 @@ public class Menu : MonoBehaviour
     {
         Scene_Manager.Level = Next_Level;
 
-        levelReciver = GameObject.FindGameObjectWithTag("Manager").GetComponent<Scene_Manager>();
+        levelReciver = GameObject.FindGameObjectWithTag("Manager").GetComponent<Scene_Manager>(); //Unoptimised, but it works
         levelReciver.LoadOtherScene();
     }
 

@@ -38,8 +38,14 @@ public class Movement : MonoBehaviour
         // Attack Settings
         if(Input.GetButtonDown("Fire1"))
         {
-            Combo = 1;
+            animator.SetBool("Finish_Attack", false);
+            Combo += 1;
             animator.SetInteger("Attacking", Combo);
+            animator.SetBool("Finish_Attack", true);
+            if(Combo == 3) 
+            {
+                Combo = 0;
+            }
         }
     }
 

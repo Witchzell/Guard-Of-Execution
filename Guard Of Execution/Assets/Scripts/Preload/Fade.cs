@@ -8,6 +8,7 @@ public class Fade : MonoBehaviour
 {
     // dependencies
     [SerializeField] private Image deathScreen; // screen of death
+    KillBox_Detection kB;
     
     private void Awake()
     {
@@ -31,6 +32,9 @@ public class Fade : MonoBehaviour
             deathScreen.color = new Color(0, 0, 0, i);
             yield return null;
         }
+
+        kB = GameObject.FindGameObjectWithTag("Player").GetComponent<KillBox_Detection>(); //Unoptimised, but it works
+        kB.fadeDeath = false;
     }
 
     public void DeathLeaver()

@@ -1,14 +1,18 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AppearAni
     - CharacterController2D
     - DDOL
+    - Fade
+    - FadeAni
     - KillBox_Detection
     - Level_Indicator
     - Menu
     - Movement
     - Pause
     - Scene_Manager
+    - getOut
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
     - Cinemachine.CinemachineGroupComposer
@@ -97,29 +101,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 624}
     - Class: 114
-      Script: {instanceID: 1742}
+      Script: {instanceID: 1744}
     - Class: 114
-      Script: {instanceID: 1880}
+      Script: {instanceID: 1882}
     - Class: 114
-      Script: {instanceID: 2658}
+      Script: {instanceID: 2660}
     - Class: 114
-      Script: {instanceID: 2798}
+      Script: {instanceID: 2800}
     - Class: 114
-      Script: {instanceID: 2978}
+      Script: {instanceID: 2980}
     - Class: 114
-      Script: {instanceID: 3038}
+      Script: {instanceID: 3040}
     - Class: 114
-      Script: {instanceID: 3408}
+      Script: {instanceID: 3410}
     - Class: 114
-      Script: {instanceID: 4232}
+      Script: {instanceID: 4238}
     - Class: 114
-      Script: {instanceID: 4456}
+      Script: {instanceID: 4462}
     - Class: 114
-      Script: {instanceID: 4650}
+      Script: {instanceID: 4656}
     - Class: 114
-      Script: {instanceID: 5160}
+      Script: {instanceID: 5166}
     - Class: 114
-      Script: {instanceID: 5170}
+      Script: {instanceID: 5176}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -170,27 +174,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 624}
     - Class: 114
-      Script: {instanceID: 1742}
+      Script: {instanceID: 1744}
     - Class: 114
-      Script: {instanceID: 1880}
+      Script: {instanceID: 1882}
     - Class: 114
-      Script: {instanceID: 2658}
+      Script: {instanceID: 2660}
     - Class: 114
-      Script: {instanceID: 2798}
+      Script: {instanceID: 2800}
     - Class: 114
-      Script: {instanceID: 2978}
+      Script: {instanceID: 2980}
     - Class: 114
-      Script: {instanceID: 3038}
+      Script: {instanceID: 3040}
     - Class: 114
-      Script: {instanceID: 4232}
+      Script: {instanceID: 4238}
     - Class: 114
-      Script: {instanceID: 4456}
+      Script: {instanceID: 4462}
     - Class: 114
-      Script: {instanceID: 4650}
+      Script: {instanceID: 4656}
     - Class: 114
-      Script: {instanceID: 5160}
+      Script: {instanceID: 5166}
     - Class: 114
-      Script: {instanceID: 5170}
+      Script: {instanceID: 5176}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -224,20 +228,30 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1518}
+      Script: {instanceID: 1520}
     - Class: 114
-      Script: {instanceID: 1892}
+      Script: {instanceID: 1894}
     - Class: 114
-      Script: {instanceID: 2272}
+      Script: {instanceID: 2274}
     - Class: 114
-      Script: {instanceID: 2712}
+      Script: {instanceID: 2714}
     - Class: 114
-      Script: {instanceID: 3122}
+      Script: {instanceID: 3124}
     - Class: 114
-      Script: {instanceID: 3504}
+      Script: {instanceID: 3506}
+    - Class: 114
+      Script: {instanceID: 88668}
+    - Class: 114
+      Script: {instanceID: 88676}
+    - Class: 114
+      Script: {instanceID: 91652}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -268,27 +282,29 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1518}
+      Script: {instanceID: 1520}
     - Class: 114
-      Script: {instanceID: 1734}
+      Script: {instanceID: 1736}
     - Class: 114
-      Script: {instanceID: 1934}
+      Script: {instanceID: 1936}
     - Class: 114
-      Script: {instanceID: 1946}
+      Script: {instanceID: 1948}
     - Class: 114
-      Script: {instanceID: 2272}
+      Script: {instanceID: 2274}
     - Class: 114
-      Script: {instanceID: 2712}
+      Script: {instanceID: 2714}
     - Class: 114
-      Script: {instanceID: 2894}
+      Script: {instanceID: 2896}
     - Class: 114
-      Script: {instanceID: 3122}
+      Script: {instanceID: 3124}
     - Class: 114
-      Script: {instanceID: 3380}
+      Script: {instanceID: 3382}
     - Class: 114
-      Script: {instanceID: 3504}
+      Script: {instanceID: 3506}
     - Class: 114
-      Script: {instanceID: 5862}
+      Script: {instanceID: 3546}
+    - Class: 114
+      Script: {instanceID: 5868}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -410,7 +426,7 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
-      Hash: b788a6f8a69c28684f402bd319483745
+      Hash: b840e37e4a8ef43e373d6035e650bee1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: KillBox_Detection
@@ -750,6 +766,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.SpriteShape.Runtime.dll
     namespaceName: UnityEngine.U2D
     className: SpriteShapeController
+  - hash:
+      serializedVersion: 2
+      Hash: 89943555fecedb7583cebe32f11d16cd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Fade
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
@@ -1164,6 +1186,24 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
+  - hash:
+      serializedVersion: 2
+      Hash: b3b8a857543cad1dbeb8b2dfff02350d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FadeAni
+  - hash:
+      serializedVersion: 2
+      Hash: ad86e1d783189cb1efd40716113d3713
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AppearAni
+  - hash:
+      serializedVersion: 2
+      Hash: 04c46d6e6bfc56bbe3eda3b5eb3706a7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: getOut
   platform: 24
   scenePathNames:
   - Assets/Scenes/Preload.unity
