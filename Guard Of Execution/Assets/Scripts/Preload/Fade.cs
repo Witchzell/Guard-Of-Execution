@@ -8,7 +8,7 @@ public class Fade : MonoBehaviour
 {
     // dependencies
     [SerializeField] private Image deathScreen; // screen of death
-    KillBox_Detection kB;
+    PlayerDeath kB;
     
     private void Awake()
     {
@@ -33,7 +33,7 @@ public class Fade : MonoBehaviour
             yield return null;
         }
 
-        kB = GameObject.FindGameObjectWithTag("Player").GetComponent<KillBox_Detection>(); //Unoptimised, but it works
+        kB = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDeath>(); //Unoptimised, but it works
         kB.fadeDeath = false;
     }
 

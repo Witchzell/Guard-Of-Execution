@@ -8,6 +8,8 @@ TagManager:
   - KillBox
   - Manager
   - Fade
+  - Enemy
+  - Avoid
   layers:
   - Default
   - TransparentFX
@@ -16,8 +18,8 @@ TagManager:
   - Water
   - UI
   - Player
-  - Camera_Colliders
-  - 
+  - Enemy
+  - Evitate
   - 
   - 
   - 
@@ -50,4 +52,10 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1525997201
+    locked: 0
+  - name: Enemy
+    uniqueID: 3606195435
+    locked: 0
+  - name: Gradients
+    uniqueID: 2629326219
     locked: 0
