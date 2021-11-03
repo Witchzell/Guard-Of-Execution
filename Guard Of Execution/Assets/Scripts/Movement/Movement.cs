@@ -10,7 +10,6 @@ public class Movement : MonoBehaviour
     [Header("Movement")]
     public float runSpeed = 5f;
     private float horizontalSpeed = 0f;
-    public int Combo = 0;
     bool jump = false;
 
     [Header("Dependencies")]
@@ -41,12 +40,6 @@ public class Movement : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(horizontalSpeed)); // Animation for running
         animator.SetFloat("Falling", rb.velocity.y);
 
-        // Attack Settings
-        if(Input.GetButtonDown("Fire1"))
-        {
-            StartCoroutine(Attack());
-        }
-
         //Knockback
         if(PlayerDeath.hp != PlayerDeath.newHp)
         {
@@ -63,19 +56,5 @@ public class Movement : MonoBehaviour
         animator.SetBool("Jumping", false);
         jump = false;
         animator.SetInteger("Attacking", 0);
-    }
-
-    private IEnumerator Attack()
-    {
-        animator.SetBool("Finish_Attack", false);
-        Combo += 1;
-        animator.SetInteger("Attacking", Combo);
-        animator.SetBool("Finish_Attack", true);
-        if(Combo == 3) 
-        {
-            Combo = 0;
-        }
-
-        yield return new WaitForSeconds(2);
     }
 }
