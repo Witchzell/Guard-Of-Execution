@@ -7,21 +7,27 @@ public class Movement : MonoBehaviour
     public CharacterController2D controller;
 
     // Public for ease of change in the inspector (unity)
+    [Header("Movement")]
     public float runSpeed = 5f;
     private float horizontalSpeed = 0f;
     public int Combo = 0;
-
     bool jump = false;
 
+    [Header("Dependencies")]
     public Animator animator;
     private Rigidbody2D rb;
+    public PlayerDeath PlayerDeath;
+
+    [Header("Knockback")]
+    public int knock = 10;
+    public int knockUp = 10;
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         // Movement Settings
         horizontalSpeed = Input.GetAxisRaw("Horizontal") * runSpeed; // Input from player
@@ -38,14 +44,16 @@ public class Movement : MonoBehaviour
         // Attack Settings
         if(Input.GetButtonDown("Fire1"))
         {
-            animator.SetBool("Finish_Attack", false);
-            Combo += 1;
-            animator.SetInteger("Attacking", Combo);
-            animator.SetBool("Finish_Attack", true);
-            if(Combo == 3) 
-            {
-                Combo = 0;
-            }
+            StartCoroutine(Attack());
+        }
+
+        //Knockback
+        if(PlayerDeath.hp != PlayerDeath.newHp)
+        {
+            //Direction of knockback
+            // Vector3 direction = (playerPos - enemyPos).normalized; For the future
+            rb.AddForce(new Vector2(-knock, knockUp));
+            PlayerDeath.newHp = PlayerDeath.hp;
         }
     }
 
@@ -55,5 +63,19 @@ public class Movement : MonoBehaviour
         animator.SetBool("Jumping", false);
         jump = false;
         animator.SetInteger("Attacking", 0);
+    }
+
+    private IEnumerator Attack()
+    {
+        animator.SetBool("Finish_Attack", false);
+        Combo += 1;
+        animator.SetInteger("Attacking", Combo);
+        animator.SetBool("Finish_Attack", true);
+        if(Combo == 3) 
+        {
+            Combo = 0;
+        }
+
+        yield return new WaitForSeconds(2);
     }
 }

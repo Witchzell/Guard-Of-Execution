@@ -34,9 +34,16 @@ public class EnemyBrain : MonoBehaviour
     private bool Grounded;
     const float GroundedRadius = .2f;
 
+    private float horizontalSpeed = 0f; //Movement speed calculation
+
     public UnityEvent OnLandEvent;
     Seeker hunt; //Referencing other script
     Rigidbody2D rb; //Referencing rigidbody
+    EnemyAttack eA; //Referencing detector
+    
+    //For animation reference
+    [Header("Animation")]
+    public Animator animator;
 
     private void Awake()
     {
@@ -58,7 +65,7 @@ public class EnemyBrain : MonoBehaviour
         if(TargetDetected() && followOrNot)
         {
             PathFollow();
-        }
+        }  
     }
 
     private void UpdatePath()
@@ -112,6 +119,10 @@ public class EnemyBrain : MonoBehaviour
 
         //Movement
         rb.AddForce(force);
+
+        //Animation for character
+        horizontalSpeed = rb.velocity.magnitude;
+        animator.SetFloat("Speed", Mathf.Abs(horizontalSpeed));
 
         //Next waypoint
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentPath]);

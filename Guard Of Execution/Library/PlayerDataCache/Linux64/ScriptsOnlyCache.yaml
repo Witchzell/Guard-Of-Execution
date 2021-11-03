@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - AppearAni
     - CharacterController2D
     - DDOL
+    - EnemyAttack
     - EnemyBrain
     - Fade
     - FadeAni
@@ -110,31 +111,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1968}
     - Class: 114
-      Script: {instanceID: 2708}
+      Script: {instanceID: 2476}
     - Class: 114
-      Script: {instanceID: 2744}
+      Script: {instanceID: 2578}
     - Class: 114
-      Script: {instanceID: 2894}
+      Script: {instanceID: 2712}
     - Class: 114
-      Script: {instanceID: 3084}
+      Script: {instanceID: 2748}
     - Class: 114
-      Script: {instanceID: 3150}
+      Script: {instanceID: 2898}
     - Class: 114
-      Script: {instanceID: 3554}
+      Script: {instanceID: 3088}
     - Class: 114
-      Script: {instanceID: 4420}
+      Script: {instanceID: 3154}
     - Class: 114
-      Script: {instanceID: 4664}
+      Script: {instanceID: 3558}
     - Class: 114
-      Script: {instanceID: 4868}
+      Script: {instanceID: 4424}
     - Class: 114
-      Script: {instanceID: 5394}
+      Script: {instanceID: 4668}
     - Class: 114
-      Script: {instanceID: 5404}
+      Script: {instanceID: 4872}
     - Class: 114
-      Script: {instanceID: 5918}
+      Script: {instanceID: 5398}
     - Class: 114
-      Script: {instanceID: 78970}
+      Script: {instanceID: 5408}
+    - Class: 114
+      Script: {instanceID: 5922}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -187,23 +190,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1914}
     - Class: 114
-      Script: {instanceID: 2744}
+      Script: {instanceID: 2748}
     - Class: 114
-      Script: {instanceID: 2894}
+      Script: {instanceID: 2898}
     - Class: 114
-      Script: {instanceID: 3084}
+      Script: {instanceID: 3088}
     - Class: 114
-      Script: {instanceID: 3150}
+      Script: {instanceID: 3154}
     - Class: 114
-      Script: {instanceID: 4420}
+      Script: {instanceID: 4424}
     - Class: 114
-      Script: {instanceID: 4664}
+      Script: {instanceID: 4668}
     - Class: 114
-      Script: {instanceID: 4868}
+      Script: {instanceID: 4872}
     - Class: 114
-      Script: {instanceID: 5394}
+      Script: {instanceID: 5398}
     - Class: 114
-      Script: {instanceID: 5404}
+      Script: {instanceID: 5408}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -252,15 +255,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2438}
     - Class: 114
-      Script: {instanceID: 2800}
+      Script: {instanceID: 2804}
     - Class: 114
-      Script: {instanceID: 3242}
+      Script: {instanceID: 3246}
     - Class: 114
-      Script: {instanceID: 3388}
+      Script: {instanceID: 3392}
     - Class: 114
-      Script: {instanceID: 3656}
+      Script: {instanceID: 3660}
     - Class: 114
-      Script: {instanceID: 4202}
+      Script: {instanceID: 4206}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -301,19 +304,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2336}
     - Class: 114
-      Script: {instanceID: 2800}
+      Script: {instanceID: 2804}
     - Class: 114
-      Script: {instanceID: 2996}
+      Script: {instanceID: 3000}
     - Class: 114
-      Script: {instanceID: 3242}
+      Script: {instanceID: 3246}
     - Class: 114
-      Script: {instanceID: 3524}
+      Script: {instanceID: 3528}
     - Class: 114
-      Script: {instanceID: 3656}
+      Script: {instanceID: 3660}
     - Class: 114
-      Script: {instanceID: 3698}
+      Script: {instanceID: 3702}
     - Class: 114
-      Script: {instanceID: 6140}
+      Script: {instanceID: 6144}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -447,7 +450,7 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
-      Hash: 099bed4c48ced9f45e04b16a8ba50d2d
+      Hash: 92d90d61faa2ab39f69a87acb88cd202
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerDeath
@@ -585,6 +588,12 @@ ScriptsOnlyBuild:
     className: CinemachinePixelPerfect
   - hash:
       serializedVersion: 2
+      Hash: 8c704815714b7a2f3305fe8bb21d9300
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NPCDeath
+  - hash:
+      serializedVersion: 2
       Hash: c1d728126ff1918728036c59106d32b2
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -595,6 +604,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine.PostFX
     className: CinemachinePostProcessing
+  - hash:
+      serializedVersion: 2
+      Hash: 7660fb41e0795b03102e9b9bd624181c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyAttack
   - hash:
       serializedVersion: 2
       Hash: 2ce2187bbae6f802011f568630bd3d1f
@@ -615,7 +630,7 @@ ScriptsOnlyBuild:
     className: DynamicGridObstacle
   - hash:
       serializedVersion: 2
-      Hash: c28a8c07e2e4049d0fd97505b73a3d0a
+      Hash: 2f83693769dfac0bd7ff2ad69bcc750c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyBrain
@@ -1107,7 +1122,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 1a93ebf93aa5acbb36efc5f51f3ed126
+      Hash: b6895b79f2f97d017072d1de67175abf
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Movement
@@ -1405,12 +1420,6 @@ ScriptsOnlyBuild:
     assemblyName: AstarPathfindingProject.dll
     namespaceName: Pathfinding
     className: SingleNodeBlocker
-  - hash:
-      serializedVersion: 2
-      Hash: 8c704815714b7a2f3305fe8bb21d9300
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: NPCDeath
   platform: 24
   scenePathNames:
   - Assets/Scenes/Preload.unity
